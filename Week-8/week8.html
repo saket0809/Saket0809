@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations Example</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background:beige;
+            height: 100vh;  
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+        }
+
+        .stage {
+            width: 500px;
+            height: 200px;
+            border: 2px dashed white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            border-radius: 10px;
+            background: blue;
+            animation: moveBox 4s infinite alternate ease-in-out;
+        }
+
+        @keyframes moveBox {
+            0% {
+                transform: translateX(0) rotate(0deg) scale(1);
+                background: #00ffd5;
+            }
+            25% {
+                transform: translateX(120px) rotate(90deg) scale(1.3);
+                background: #00ff88;
+            }
+            50% {
+                transform: translateX(240px) rotate(180deg) scale(1);
+                background: #ffee00;
+            }
+            75% {
+                transform: translateX(480px) rotate(240deg) scale(1.3);
+                background: burlywood;
+            }
+            100% {
+                transform: translateX(500px) rotate(360deg) scale(1);
+                background: blue;
+            }
+            
+          
+        }
+        h1{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Animations Demo</h1>
+    <div class="stage">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
