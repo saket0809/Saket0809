@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color: lavender;">
+    <h1 style="text-align:center;">College Admission Registration</h1>
+    <form style="text-align:center">
+        <table border="4" cellpadding="5" style="text-align:center; margin:auto; border:3px solid;">
+            
+            <tr>
+                <th style="text-align:center;">
+                    <label for="fname">Full Name:</label>
+                    <td><input type="text" id="fname" name="fname"></td><br>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="email">Email:</label>
+                    <td><input type="text" id="email" name="email"></td><br>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="phonenumber">Phone Number:</label>
+                    <td><input type="number" id="phonenumber" name="phonenumber"></td><br>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="Gender"> Gender:</label>
+                    <td>
+                        <input type="radio" id="Gender" gender="Gender">
+                        <label for="male">Male</label>
+                        <input type="radio" id="Gender" gender="Gender">
+                        <label for="female">Female</label>
+                        <input type="radio" id="Gender" gender="Gender">
+                        <label for="other">other</label>
+                    </td>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="Course Applying For">Course Applying For:</label>
+                    <td>
+                        <select id="Course Applying For" name="Course Applying For">
+                            <option value="B.Tech">B.Tech</option>
+                            <option value="B.PT">B.PT</option>
+                            <option value="B.Pharm">B.Pharm</option>
+                            <option value="B.Des">B.Des</option>
+                            <option value="B.HM">B.HM</option>
+                        </select>
+                    </td>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="hobbies">Hobbies:</label>
+                    <td>
+                        <input type="checkbox" id="hobbies" name="hobbies">
+                        <label for="hobbies">Sports</label>
+
+                        <input type="checkbox" id="hobbies" name="hobbies">
+                        <label for="hobbies">Music</label>
+
+                        <input type="checkbox" id="hobbies" name="hobbies">
+                        <label for="hobbies">Reading</label>
+                    </td>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="date of birth">Date of Birth:</label>
+                    <td>
+                        <input type="date" id="date of birth" name="date of birth">
+                    </td>
+                </th>
+            </tr>
+
+                    <tr>
+                <th>
+                    <label for="upload certificates">Upload Certificates:</label>
+                    <td>
+                        <input type="file" id="upload certificates" name="upload certificates">
+                    </td>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="address"> Address:</label>
+                    <td>
+                        <textarea name="message" row="10" cols="30"></textarea>
+                    </td>
+                </th>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Submit">
+                    <input type="submit" value="Reset">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
