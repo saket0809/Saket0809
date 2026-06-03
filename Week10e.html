@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<body> 
+
+<h2>Enter 6 Subject Marks (comma separated)</h2> 
+
+<input type="text" id="marks" placeholder="e.g. 70,80,65,90,75,85"> 
+
+<br><br> 
+
+<button onclick="calculate()">Calculate</button> 
+
+<h3 id="result"></h3> 
+
+
+</body> 
+<script>
+    function calculate() { 
+
+input = document.getElementById("marks").value; 
+
+arr = input.split(","); // convert to array 
+
+   sum = 0; 
+
+    for (let i = 0; i < arr.length; i++) { 
+
+        sum += parseFloat(arr[i]); 
+
+    } 
+
+     avg = sum / arr.length; 
+
+     grade; 
+
+ 
+
+    if (avg < 60) grade = "F"; 
+
+    else if (avg < 70) grade = "D"; 
+
+    else if (avg < 80) grade = "C"; 
+
+    else if (avg < 90) grade = "B"; 
+
+    else grade = "A"; 
+
+ 
+
+    let input = document.getElementById("marks").value; 
+
+    let arr = input.split(","); // convert to array 
+
+    let sum = 0; 
+
+    for (let i = 0; i < arr.length; i++) { 
+
+        sum += parseFloat(arr[i]); 
+
+    } 
+
+    let avg = sum / arr.length; 
+
+    let grade; 
+
+ 
+
+    if (avg < 60) grade = "F"; 
+
+    else if (avg < 70) grade = "D"; 
+
+    else if (avg < 80) grade = "C"; 
+
+    else if (avg < 90) grade = "B"; 
+
+    else grade = "A"; 
+
+ 
+
+    document.getElementById("result").innerHTML = 
+
+        "Average: " + avg.toFixed(2) + "<br>Grade: " + grade; 
+
+} 
+
+</script>
+
+</html> 

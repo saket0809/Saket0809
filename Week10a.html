@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+    <title>Sign of Product</title> 
+
+</head> 
+
+<body> 
+
+<h2>Sign of Product</h2> 
+
+<button onclick="findSign()">Check Sign</button> 
+
+<p id="result" style="font-size:20px; font-weight:bold;"></p> 
+
+<script> 
+
+function findSign() { 
+
+    let a = 3; 
+
+    let b = -7; 
+
+    let c = 2; 
+
+    let product = a * b * c; 
+
+    if (product > 0) { 
+
+        document.getElementById("result").innerHTML = "The sign is plus (+)"; 
+
+    }  
+
+    else if (product < 0) { 
+
+        document.getElementById("result").innerHTML = "The sign is minus (-)"; 
+
+    }  
+
+    else { 
+
+        document.getElementById("result").innerHTML = "The product is zero (0)"; 
+
+    } 
+
+} 
+
+</script> 
+
+</body> 
+
+</html> 

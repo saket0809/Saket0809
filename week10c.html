@@ -1,0 +1,97 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+    <title>Largest of Four Numbers</title> 
+
+    <style> 
+
+#resultBox { 
+
+display: none; 
+
+margin-top: 20px; 
+
+padding: 15px; 
+
+border: 2px solid black; 
+
+width: 250px; 
+
+background-color: lightyellow; 
+
+ font-size: 18px; 
+
+} 
+
+ input { 
+
+margin: 5px; 
+
+padding: 5px; 
+
+width: 80px; 
+
+} 
+
+    </style> 
+
+</head> 
+
+<body> 
+
+<h2>Find Largest Number</h2> 
+
+<input type="number" id="a" placeholder="Enter a"> 
+
+<input type="number" id="b" placeholder="Enter b"> 
+
+<input type="number" id="c" placeholder="Enter c"> 
+
+<input type="number" id="d" placeholder="Enter d"> 
+
+<br><br> 
+
+<button onclick="findLargest()">Find Largest</button> 
+
+<div id="resultBox"></div> 
+
+<script> 
+
+function findLargest() { 
+
+    let a = Number(document.getElementById("a").value); 
+
+    let b = Number(document.getElementById("b").value); 
+
+    let c = Number(document.getElementById("c").value); 
+
+    let d = Number(document.getElementById("d").value); 
+
+ 
+
+    let largest = a; 
+
+    if (b > largest) largest = b; 
+
+    if (c > largest) largest = c; 
+
+    if (d > largest) largest = d; 
+
+ 
+
+    let box = document.getElementById("resultBox"); 
+
+    box.style.display = "block"; 
+
+    box.innerHTML = "The largest number is: " + largest; 
+
+} 
+
+</script> 
+
+</body> 
+
+</html> 
