@@ -1,0 +1,72 @@
+ <!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+    <title>Mobile Number Validation</title> 
+
+</head> 
+
+<body> 
+
+<h2>Enter Mobile Number</h2> 
+
+<input  
+
+    type="text"  
+
+    id="mobile"  
+
+    onblur="validateMobile()"  
+
+    placeholder="Enter 10-digit number" 
+
+    maxlength="10" 
+
+    required 
+
+> 
+
+<p id="message"></p> 
+
+<script> 
+
+function validateMobile() { 
+
+    let mobile = document.getElementById("mobile").value.trim(); 
+
+    let message = document.getElementById("message"); 
+
+    // Regular expression for exactly 10 digits 
+
+    let pattern = /^[0-9]{10}$/; 
+
+    if (mobile === "") { 
+
+        message.textContent = "Mobile number is required"; 
+
+        message.style.color = "orange"; 
+
+    }  
+
+    else if (!pattern.test(mobile)) { 
+
+        message.textContent = "Mobile number must be exactly 10 digits"; 
+
+        message.style.color = "red"; 
+
+    }  
+
+    else { 
+
+        message.textContent = "Valid mobile number"; 
+
+        message.style.color = "green";
+}
+}
+</script> 
+
+</body> 
+
+</html> 

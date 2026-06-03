@@ -1,0 +1,47 @@
+!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+    <title>Username Validation</title> 
+
+</head> 
+
+<body> 
+
+<h2>Enter Username</h2> 
+
+<input type="text" id="username" onkeyup="checkUsername()" placeholder="Enter username"> 
+
+<p id="message"></p> 
+
+<script> 
+
+function checkUsername() { 
+
+    let username = document.getElementById("username").value; 
+
+    let message = document.getElementById("message"); 
+
+    if (username.length < 5) { 
+
+        message.innerHTML = "Username must be at least 5 characters"; 
+
+        message.style.color = "red"; 
+
+    } else { 
+
+        message.innerHTML = "Valid username"; 
+
+        message.style.color = "green"; 
+
+    } 
+
+} 
+
+</script> 
+
+</body> 
+
+</html> 

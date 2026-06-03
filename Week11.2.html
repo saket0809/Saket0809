@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+    <title>Email Validation</title> 
+
+</head> 
+
+<body> 
+
+<h2>Registration Form</h2> 
+
+<form onsubmit="return validateEmail()"> 
+
+    Email: <input type="text" id="email" placeholder="Enter email"> 
+
+    <br><br> 
+
+    <p id="message"></p> 
+
+    <button type="submit">Submit</button> 
+
+</form> 
+
+<script> 
+
+function validateEmail() { 
+
+    let email = document.getElementById("email").value; 
+
+    let message = document.getElementById("message"); 
+
+    // Regular expression for email validation 
+
+    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
+
+    if (!pattern.test(email)) { 
+
+        message.innerHTML = "Invalid email format"; 
+
+        message.style.color = "red"; 
+
+        return false; // Stops form submission 
+
+    } 
+
+    return true; // Allows form submission 
+
+} 
+
+</script> 
+
+</body> 
+
+</html> 
